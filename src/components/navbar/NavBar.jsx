@@ -6,7 +6,7 @@ import { RxCross2 } from "react-icons/rx";
 const navItems = [
   {
     id: 0,
-    name: "home",
+    name: "Inicio",
   },
   {
     id: 1,
@@ -14,15 +14,15 @@ const navItems = [
   },
   {
     id: 2,
-    name: "works",
+    name: "trabajo",
   },
   {
     id: 3,
-    name: "resume",
+    name: "resumen",
   },
   {
     id: 4,
-    name: "contact",
+    name: "contacto",
   },
 ];
 
@@ -51,19 +51,21 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
 
   return (
     <div
-      className={`w-full mx-auto  fixed top-0 py-5 sm:py-4 z-30 ${
-        scrollPosition > 0 ? `bg-white shadow-md` : "bg-transparent"
+      className={`w-full mx-auto  fixed top-0  sm:py-4 z-30 ${
+        scrollPosition > 0 ? `bg-white shadow-md` : "bg-transparent text-white"
       } `}
     >
       <nav className=" container m-auto flex items-center justify-between">
-        <div data-aos="fade-down" className="logo">
-          <Link
+      <img src="/src/assets/logo-terridev.png" alt="" className="h-72 -ml-7"/>
+        <div data-aos="fade-down" className="logo flex flex-row items-center">
+    
+        {/*<Link
             onClick={() => window.scrollTo(0, 0)}
             to="/"
             className="text-3xl font-bold sm:text-3xl"
           >
-            John Doe.
-          </Link>
+            Terri Dev.
+          </Link>*/}
         </div>
         <div
           data-aos="fade-down"
@@ -97,8 +99,8 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
                 <a
                   onClick={() => toggleNav(item.name)}
                   href={`#${item.name}`}
-                  className={`uppercase cursor-pointer text-black hover:text-yellow-600 font-bold ${
-                    item.name === activeIndex ? "text-yellow-600" : ""
+                  className={`uppercase cursor-pointer text-black hover:text-red-600 font-bold ${
+                    item.name === activeIndex ? "text-red-600" : ""
                   }`}
                 >
                   {item.name}
@@ -106,10 +108,12 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
               </li>
             ))}
             <a
-              href=""
-              className="bg-black text-[1rem] text-white px-8 py-2 rounded-lg font-bold hover:text-yellow-400 md:m-5 md:block md:mx-auto md:w-fit lg:px-3"
+              name=""
+              id=""
+              href="#contacto"
+              className="bg-black text-[1rem] text-white px-8 py-2 rounded-lg font-bold hover:text-red-600 md:m-5 md:block md:mx-auto md:w-fit lg:px-3"
             >
-              HIRE ME
+              Contáctame
             </a>
           </ul>
         </div>

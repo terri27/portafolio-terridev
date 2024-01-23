@@ -8,13 +8,15 @@ import { IoLogoHtml5, IoLogoCss3 } from "react-icons/io";
 import {
   SiJavascript,
   SiTailwindcss,
-  SiMongodb,
-  SiExpress,
+  SiHtml5,
+  SiWordpress,
+  SiPython,
 } from "react-icons/si";
 import { GrCode } from "react-icons/gr";
-import { SiNextdotjs } from "react-icons/si";
+import { FaWordpress } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { IoLogoNodejs } from "react-icons/io";
+import { IoLogoJavascript } from "react-icons/io";
 
 const Skills = ({ darkMode }) => {
   return (
@@ -22,7 +24,7 @@ const Skills = ({ darkMode }) => {
       <div className=" container m-auto  mt-16">
         {/* heading */}
         <div data-aos="fade-up" className="relative mb-5">
-          <h3 className=" text-3xl font-black text-gray-400 sm:text-2xl">
+          <h3 className=" text-3xl font-black text-red-600 sm:text-2xl">
             My Skills
           </h3>
           <span className="h-[1.1px] right-0 absolute w-[90%] bg-gray-300 block"></span>
@@ -34,7 +36,7 @@ const Skills = ({ darkMode }) => {
               data-aos="fade-up"
               className=" text-gray-700 font-medium w-[100%]"
             >
-              Here are my skills.
+              Codificando el Mañana...
             </p>
             {/* left box */}
             <div
@@ -46,14 +48,24 @@ const Skills = ({ darkMode }) => {
                 <ProgressBar logo={<IoLogoCss3 />} name={"CSS"} value={88} />
                 <ProgressBar
                   logo={<SiJavascript />}
-                  name={"Javascript"}
+                  name={"JavaScript"}
                   value={80}
                 />
-                <ProgressBar logo={<FaReact />} name={"React Js"} value={80} />
+                <ProgressBar logo={<FaReact />} name={"React Js"} value={50} />
                 <ProgressBar
                   logo={<SiTailwindcss />}
                   name={"Tailwind CSS"}
+                  value={60}
+                />
+                <ProgressBar
+                  logo={<SiWordpress />}
+                  name={"WordPress"}
                   value={80}
+                />
+                <ProgressBar
+                  logo={<SiPython />}
+                  name={"Python"}
+                  value={60}
                 />
               </div>
             </div>
@@ -68,27 +80,27 @@ const Skills = ({ darkMode }) => {
                 skill={"Node Js"}
               />
               <SkillBox
-                logo={<SiMongodb />}
+                logo={<SiHtml5 />}
                 black={"white"}
                 white={"black"}
-                skill={"MongoDB"}
+                skill={"HTML5"}
               />
             </div>
             <div className="last2 flex flex-col gap-10">
               <SkillBox
-                logo={<SiExpress />}
+                logo={<IoLogoJavascript  />}
                 black={"black"}
                 white={"white"}
-                skill={"Express Js"}
+                skill={"JavaScript"}
               />
               <SkillBox
                 className=""
                 logo={
-                  <GrCode/>
+                  <FaWordpress/>
                 }
                 black={"black"}
                 white={"white"}
-                skill={"C++"}
+                skill={"Wordpress"}
               />
               {/* <SkillBox
                 className=""
